@@ -95,10 +95,7 @@ class App extends React.Component{
       markdown: placeholder,
       editMax: false,
       previewMax: false
-    };
-    this.handleChange = this.handleChange.bind(this);
-    this.handlePreviewMax = this.handlePreviewMax.bind(this);
-
+    }
   }
   
   handleChange = (e) => {
