@@ -1,3 +1,3 @@
-# nkat
+# My training projects
 
-for FreeCodeCamp projects
+all my FreeCodeCamp projects
