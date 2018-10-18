@@ -1,0 +1,192 @@
+@import url("https://fonts.googleapis.com/css?family=Nunito");
+body {
+  background: black;
+  color: white;
+  text-align: center;
+  font-family: "Nunito", sans-serif;
+  letter-spacing: 0.1em;
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 296px;
+}
+
+h1 {
+  font-size: 18px;
+  margin: 40px;
+  letter-spacing: 0.5em;
+}
+
+footer {
+  text-align: center;
+  color: #3c4468;
+}
+footer a {
+  color: #3c4468;
+  text-decoration: none;
+}
+
+/*** Drum machine block ***/
+#drum-machine {
+  max-width: 650px;
+  min-width: 336px;
+  border-radius: 8px;
+  margin: auto;
+  background: #3c4468;
+}
+
+/*** Display ***/
+.display {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 20px;
+  height: 120px;
+  border-radius: 8px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  font-size: 1.8rem;
+}
+
+.off {
+  background: linear-gradient(165deg, #222, #333, #222);
+  color: #777;
+}
+
+.message {
+  width: 100%;
+  padding: 30px;
+}
+
+.data-left {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.5);
+  width: 50%;
+  text-align: left;
+}
+
+.data-right {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.5);
+  width: 50%;
+  text-align: right;
+}
+
+/*** Container ***/
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 40px 40px auto auto 85px auto 80px;
+  grid-gap: 8px;
+  align-items: start;
+  padding: 20px 40px;
+}
+
+.volume-bar {
+  grid-column: 2 / 4;
+}
+
+hr {
+  grid-column: 1 / 4;
+  width: 100%;
+  border: 0;
+  border-top: 2px solid #485178;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+/*** Power switch ***/
+.toggle {
+  width: 70px;
+  height: 16px;
+  border-radius: 10px;
+  background: #485178;
+  cursor: pointer;
+  margin-top: 2px;
+  margin-bottom: 6px;
+  -webkit-box-shadow: inset 0px 2px 0px 0px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: inset 0px 2px 0px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0px 2px 0px 0px rgba(0, 0, 0, 0.3);
+}
+
+.toggle-on {
+  width: 32px;
+  height: 20px;
+  border-radius: 10px;
+  background: green;
+  transform: translate(0, -2px);
+  -webkit-box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, 0.3);
+}
+
+.toggle-off {
+  width: 32px;
+  height: 20px;
+  border-radius: 10px;
+  transform: translate(38px, -2px);
+  background: #ea4a70;
+  -webkit-box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, 0.3);
+}
+
+/*** Volume range slider ***/
+input[type="range"] {
+  -webkit-appearance: none;
+  -moz-apperance: none;
+  appearance: none;
+  width: 100%;
+  height: 16px;
+  outline: none;
+  border-radius: 10px;
+  background: #485178;
+  cursor: pointer;
+  -webkit-box-shadow: inset 0px 2px 0px 0px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: inset 0px 2px 0px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0px 2px 0px 0px rgba(0, 0, 0, 0.3);
+}
+
+::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  -moz-apperance: none;
+  appearance: none;
+  width: 32px;
+  height: 20px;
+  border-radius: 10px;
+  background: #7077a1;
+  -webkit-box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, 0.3);
+}
+
+/*** Contlol bar status ***/
+.ctrl-status {
+  text-align: center;
+  font-size: 0.7rem;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+/*** Buttons ***/
+button {
+  background: #485178;
+  height: 60px;
+  border-radius: 8px;
+  border: 0;
+  outline: none;
+  color: white;
+  font-weight: 800;
+  cursor: pointer;
+  -webkit-box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, 0.3);
+}
+
+button:active {
+  transform: translate(0, 2px);
+  box-shadow: none;
+}
+
+.switch-mode {
+  font-weight: 400;
+  font-size: 1rem;
+}
