@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css?family=Unica+One");
+@import url("https://fonts.googleapis.com/css?family=Raleway");
+body {
+  background: linear-gradient(-15deg, #201848, #000 20%, #000 75%, #201848);
+  min-height: 100vh;
+  text-align: center;
+  font-family: 'Raleway';
+  margin: 0;
+  padding: 0;
+}
+
+#calculator {
+  display: inline-block;
+  margin: 90px;
+  padding: 20px;
+  background: #222831;
+  font-family: 'Unica One';
+}
+
+footer {
+  border-top: 1px solid #222831;
+  font-size: 0.8rem;
+  text-align: center;
+  color: #26baee;
+  letter-spacing: 0.15em;
+}
+
+a {
+  color: #26baee;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #fff;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 90px 90px 90px 90px;
+  grid-template-rows: 110px 70px 70px 70px 70px 70px;
+  grid-gap: 20px;
+}
+
+.display {
+  background: #26baee;
+  padding: 20px;
+  grid-column: 1 / 5;
+  margin: -20px -20px 0px -20px;
+  height: 130px;
+  box-sizing: border-box;
+  color: #181d24;
+  text-align: right;
+  font-size: 40px;
+}
+
+.display > .small {
+  font-size: .6em;
+  color: #222831;
+  height: 30px;
+}
+
+.display > p {
+  margin: 10px 0;
+}
+
+button {
+  background: #1b2028;
+  color: #26baee;
+  border: 1px solid #181d24;
+  font-family: 'Unica One';
+  font-size: 25px;
+  border-radius: 3px;
+  outline: none;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+button:active {
+  outline: none;
+  background: #26baee;
+  color: #181d24;
+}
+
+.number {
+  background: none;
+  border: 1px solid #181d24;
+}
