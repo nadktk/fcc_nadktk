@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Unica+One');
-@import url('https://fonts.googleapis.com/css?family=Raleway');
+@import url("https://fonts.googleapis.com/css?family=Unica+One");
+@import url("https://fonts.googleapis.com/css?family=Raleway");
 $bg-blue: #201848;
 $bg: #222831;
 $buttons-bg: #1b2028;
@@ -8,24 +8,18 @@ $accent: #26baee;
 $pad: 20px;
 
 body {
-  background: linear-gradient(-15deg,
-    $bg-blue,
-    #000 20%,
-    #000 75%,
-    $bg-blue);
+  background: linear-gradient(-15deg, $bg-blue, #000 20%, #000 75%, $bg-blue);
   min-height: 100vh;
   text-align: center;
-  font-family: 'Raleway';
+  font-family: "Raleway";
   margin: 0;
-  padding: 0;
+  padding: 10vh 0 0 0;
 }
 
 #calculator {
   display: inline-block;
-  margin: 90px;
-  padding: $pad;
   background: $bg;
-  font-family: 'Unica One';
+  font-family: "Unica One";
 }
 
 footer {
@@ -34,51 +28,48 @@ footer {
   text-align: center;
   color: $accent;
   letter-spacing: 0.15em;
-}
-
-a {
-  color: $accent;
-  text-decoration: none;
-}
-
-a:hover {
-  color: #fff;
-}
-
-.container {
-  display: grid;
-  grid-template-columns: 90px 90px 90px 90px;
-  grid-template-rows: 110px 70px 70px 70px 70px 70px;
-  grid-gap: $pad;
+  margin-top: 10vh;
+  a {
+    color: $accent;
+    text-decoration: none;
+  }
+  a:hover {
+    color: #fff;
+  }
 }
 
 .display {
   background: $accent;
   padding: $pad;
-  grid-column: 1 / 5;
-  margin: -20px -20px 0px -20px;
-  height: 130px;
   box-sizing: border-box;
   color: $buttons-border;
   text-align: right;
-  font-size: 40px;
+  font-size: 38px;
+  width: 460px;
+  p {
+    margin: 0;
+  }
+  .small {
+    font-size: 0.6em;
+    color: $bg;
+    height: 30px;
+  }
 }
 
-.display > .small {
-  font-size: .6em;
-  color: $bg; 
-  height: 30px;
-}
-
-.display > p {
-  margin: 10px 0;
+.container {
+  display: grid;
+  grid-template-columns: 90px 90px 90px 90px;
+  grid-template-rows: 65px 65px 65px 65px 65px;
+  justify-content: center;
+  grid-gap: $pad;
+  padding: $pad;
 }
 
 button {
   background: $buttons-bg;
   color: $accent;
   border: 1px solid $buttons-border;
-  font-family: 'Unica One';
+  font-family: "Unica One";
   font-size: 25px;
   border-radius: 3px;
   outline: none;
@@ -96,4 +87,19 @@ button:active {
 .number {
   background: none;
   border: 1px solid $buttons-border;
+}
+
+@media screen and (max-width: 500px) {
+  body {
+    padding-top: 0;
+  }
+  #calculator, .display {
+    width: 100%;
+    font-size: 30px;
+  }
+  .container {
+    grid-template-columns: 20% 20% 20% 20%;
+    grid-template-rows: 50px 50px 50px 50px 50px;
+    grid-gap: 4vw;
+  }
 }

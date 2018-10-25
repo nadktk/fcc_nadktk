@@ -73,7 +73,7 @@ class Calculator extends React.Component {
   // equal button function
   equals = () => {
     this.soundPlay();
-    if (this.state.lastOperation != "") {
+    if (this.state.lastOperation != "" && this.state.line2 == "") {
       let result = this.state.line1 + this.state.lastOperation;
       result = Math.round(1000000000000 * eval(result)) / 1000000000000;
       this.setState({ 
@@ -125,13 +125,13 @@ class Calculator extends React.Component {
   render() {     
     let display = this.state.line2.replace(/\//, '÷').replace(/\*/, '×'); 
     return (
-      <div className="container">
+      <div>
       
         <div className={"display"}>
           <p className="small">{display}</p>
           <p id="display">{this.state.line1}</p>
         </div>
-
+<div className="container">
         <button
           id="clear"
           onClick={() => {
@@ -194,6 +194,7 @@ src="https://raw.githubusercontent.com/nadktk/fcc_nadktk/master/calculator/audio
             preload="true"
           />
       </div>
+</div>
     );
   }
 }
