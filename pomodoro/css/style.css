@@ -1,0 +1,165 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat|Share+Tech+Mono");
+body {
+  background: black;
+  text-align: center;
+  color: white;
+  font-family: "Montserrat";
+  letter-spacing: 0.1em;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+h1 {
+  margin: 40px auto;
+  color: #69d298;
+}
+
+#app {
+  width: 650px;
+  height: 480px;
+  box-sizing: border-box;
+  margin: 80px auto 0 auto;
+  padding: 60px 0;
+  background: radial-gradient(circle at 170px 100px, rgba(255, 255, 255, 0.3), transparent 100px), #d34747;
+  border-radius: 240px;
+  font-weight: 600;
+}
+#app .screen {
+  background: black;
+  width: 45%;
+  border-radius: 55px;
+  margin: 8px auto;
+  font-family: "Share Tech Mono", sans-serif;
+  font-size: 70px;
+  font-weight: 400;
+  padding: 15px;
+}
+#app::before {
+  content: "";
+  display: block;
+  background: #0e5d42;
+  width: 90px;
+  height: 90px;
+  border-top-left-radius: 80%;
+  border-bottom-right-radius: 80%;
+  position: absolute;
+  top: 100px;
+  left: 50%;
+}
+#app::after {
+  content: "";
+  display: block;
+  background: #0e5d42;
+  width: 70px;
+  height: 70px;
+  border-top-right-radius: 80%;
+  border-bottom-left-radius: 80%;
+  position: absolute;
+  top: 120px;
+  right: 50%;
+}
+
+.inc-dec {
+  display: inline-block;
+  width: 37%;
+  color: white;
+}
+
+button.change {
+  margin: 0 32px;
+  width: 40px;
+  color: #69d298;
+  position: relative;
+  top: -85px;
+}
+
+button {
+  width: 20%;
+  background: #0e5d42;
+  color: white;
+  border: 0;
+  outline: none;
+  border-radius: 25px;
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+  margin: 0.5rem;
+}
+button:hover {
+  cursor: pointer;
+}
+button:active {
+  background: #69d298;
+  color: #0e5d42;
+  cursor: pointer;
+}
+
+.num {
+  display: block;
+  width: 50px;
+  margin: 5px auto;
+  padding: 20px;
+  border-radius: 50px;
+  background: white;
+  font-family: "Share Tech Mono", sans-serif;
+  font-size: 40px;
+  color: black;
+}
+
+#timer-label {
+  font-size: 30px;
+}
+
+footer {
+  margin-top: 60px;
+  font-size: 0.8rem;
+  line-height: 1.5rem;
+  text-align: center;
+  color: #69d298;
+}
+footer a {
+  color: #69d298;
+  text-decoration: none;
+}
+footer a:hover {
+  color: white;
+}
+
+@media only screen and (max-width: 670px) {
+  body {
+    background: #d34747;
+  }
+
+  #app {
+    width: 100vw;
+    height: auto;
+    padding-top: 0px;
+    font-size: 0.8rem;
+    background: #d34747;
+  }
+  #app::before, #app::after {
+    display: none;
+  }
+  #app .screen {
+    font-size: 10vw;
+  }
+  #app .inc-dec {
+    width: 50%;
+  }
+  #app .num {
+    font-size: 25px;
+    padding: 15px;
+  }
+  #app button.change {
+    width: 50px;
+    margin: 5px;
+    top: -90px;
+    position: static;
+  }
+  #app button {
+    width: 120px;
+    margin: 5px;
+  }
+  #app #timer-label {
+    margin-top: 30px;
+  }
+}
