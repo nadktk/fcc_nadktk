@@ -1,0 +1,32 @@
+body {
+  background: lightblue;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.card {
+  margin: 100px auto;
+  padding: 50px;
+  width: 900px;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 3px 3px 5px rgba(0,0,0,.1);
+}
+
+.bar:hover {
+  fill: lightgreen;
+}
+
+#tooltip {
+  display: none;
+  opacity: .8;
+  background: rgba(255,255,255,.3);
+  padding: 5px 10px;
+  border: 1px solid gray;
+  border-radius: 5px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
